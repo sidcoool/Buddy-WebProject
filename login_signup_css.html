@@ -1,0 +1,74 @@
+<html>
+    <head>
+    <title>LOGIN</title>
+      <style>
+          #container
+        {
+            border-style: ridge;
+            box-sizing: border-box;
+            background-color: #f1f1f2;
+            margin-left: 750px;
+            width: 400px;
+            height: auto;
+            top: 100px;
+            align-items: center;
+            padding: 20px;
+            position: fixed;
+        }
+          
+          .bar
+          {
+              font-size: 15px;
+              height: 30px;
+              width: 100%;
+              align-self: auto;
+          }
+          
+          #submit1
+          {
+              
+              border-style:groove;
+              background-color: limegreen;
+              height: 25px;
+              width: 40%;
+              align-content: center;
+              color: white;
+              text-decoration-style:solid;
+              font-family: sans-serif;
+              font-size: 15px;
+              position: absolute;
+          }
+          
+          #submit2
+          {
+              
+              border-style:groove;
+              background-color: limegreen;
+              height: 25px;
+              width: 40%;
+              align-content: center;
+              color: white;
+              text-decoration-style:solid;
+              font-family: sans-serif;
+              font-size: 15px;
+              position: absolute;
+              left: 200px;
+          }
+        </style>
+    </head>
+    <body background="back.jpg">
+        <img src = "back2.jpg" style="position: fixed; height: 800px; width: 1100px;">
+        
+        <div id="container">
+        <form action="login_signup_php" method="post">
+        <label for="usrname"><h3>USERNAME</h3></label>
+        <div class="bar" ><input name="email1" class="bar" type="text" placeholder="Enter your Email" pattern="^\w+@+[a-zA-Z_]+\.+[a-zA-Z]$" required></div><br>
+            <label for="psw"><h3>PASSWORD</h3></label>
+        
+        <div class="bar" ><input name="psw" class="bar" type="password" placeholder="Enter your password" title="Must contain 8 to 15 characters, with atleast 1 upper case ALPHABET, 1 lower case alphabet, 1 number and 1 Special Character." pattern="^(?=.{8,15}$)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).*$" required></div><br>
+        <button id="submit1"><b>LOG IN</b></button>
+            <button id="submit2"><b>SIGN UP</b></button>
+            </form>
+            </div>
+    </body>
+</html>
