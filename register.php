@@ -16,7 +16,7 @@
         
         <div class="bar" ><input type="text" name="name" class="bar" placeholder="Enter your Name" ></div><br>    
         
-        <div class="bar" ><input type="text" name="username" value="<?php echo $username; ?>" class="bar" placeholder="Enter your username" pattern="^(?=.{3,15}$)[a-zA-Z0-9/_]+$" tiltle = "Must be atleast 3 charater long and can contain alphabets and numbers and underscore only" required></div><br>
+        <div class="bar" ><input type="text" name="username" value="<?php echo $username; ?>" class="bar" placeholder="Enter your username" pattern="^(?=.{3,15}$)[a-zA-Z0-9/_]+$" title = "Must be atleast 3 charater long and can contain alphabets and numbers and underscore only" required></div><br>
         
         <div class="bar" ><input name="password_1" class="bar" type="password" placeholder="Enter your password" title="Must contain 8 to 15 characters, with atleast 1 upper case ALPHABET, 1 lower case alphabet, 1 number and 1 Special Character." pattern="^(?=.{8,15}$)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).*$" required></div><br>
             
