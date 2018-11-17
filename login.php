@@ -17,7 +17,7 @@
 
 
         <label for="psw"><h3>PASSWORD</h3></label>
-        <div class="bar" ><input name="password" class="bar" type="password" placeholder="Enter your password" title="Must contain 8 to 15 characters, with atleast 1 upper case ALPHABET, 1 lower case alphabet, 1 number and 1 Special Character." pattern="^(?=.{8,15}$)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).*$" required></div><br>
+        <div class="bar" ><input name="password" class="bar" type="password" placeholder="Enter your password" required></div><br>
 
         <button type="submit" id="submit1" name="login_user"><b>LOG IN</b></button><br><br>
         <p>
