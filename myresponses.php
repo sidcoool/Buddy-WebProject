@@ -1,5 +1,28 @@
 <?php 
-$con = mysqli_connect("localhost","root","","buddys");
+echo" <style> body {
+  background: linear-gradient(45deg,#0677a1 50%, #78244c 50%);
+  background-size: cover;
+  height: 100%;
+  overflow: auto;
+} </style>";
+echo"
+<h1> <style> h1 { 
+     color: black;
+    text-decoration-color: none;
+    font-family: san-serif;
+    text-transform: uppercase;
+    font-size: 70px;
+    text-align: center;
+    margin-top: 50px;
+    align-content: center;
+     border-radius: 15px 50px;
+    background: #73AD21;
+    padding: 20px; 
+    }
+    </style>
+    Fielding Questions 
+</h1> <br>";
+$con = mysqli_connect("localhost","root","","buddy");
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -14,37 +37,51 @@ if (mysqli_connect_errno())
             while ($row=mysqli_fetch_array($res)) 
             {
                 $x=$x+1;
-                echo "{$x}:  {$row['ques']}<br>";
+                echo " <p>
+                    <style>
+             p{
+              font-size: 40px;
+              right: 0;
+              padding: 5px 5px;
+              color: #888;
+              border-radius: 5px;
+              cursor: pointer;
+              background-color: #E7717D	;
+              color: black;
+              z-index: 2;
+            }
+            </style>
+                {$x}:  {$row['ques']}<br></p>";
                 $row2 = mysqli_fetch_array($result);
                 if($row2['ans'] == 'A')
                 {
-                     echo "<B><font color='green'>A. {$row['A']} </font></B><br>";
-                     echo "B. {$row['B']}<br>";
-                     echo "C. {$row['C']}<br>";
-                     echo "D. {$row['D']}<br>";
+                     echo "<B><font color=#ADFF2F><font size=6px>A. {$row['A']} </font></font></B><br>";
+                     echo "<font size=4px>B. {$row['B']}<br></font>";
+                     echo " <font size=4px>C. {$row['C']}<br></font>";
+                     echo "<font size=4px> D. {$row['D']}<br></font>";
                 }
                 else if($row2['ans'] == 'B')
                 {
-                     echo "A. {$row['A']}<br>";
-                     echo "<B><font color='green'>B. {$row['B']} </font></B><br>";
-                     echo "C. {$row['C']}<br>";
-                     echo "D. {$row['D']}<br>";
+                     echo "<font size=4px> A. {$row['A']}<br></font>";
+                     echo "<B><font color=#ADFF2F><font size=6px>B. {$row['B']} </font><font></B><br>";
+                     echo "<font size=4px> C. {$row['C']}<br><font>";
+                     echo "<font size=4px>D. {$row['D']}<br></font>";
                 }
                 else if($row2['ans'] == 'C')
                 {
-                     echo "A. {$row['A']}<br>";
-                     echo "B. {$row['B']}<br>";
-                     echo "<B><font color='green'>C. {$row['C']} </font></B><br>";
-                     echo "D. {$row['D']}<br>";
+                     echo "<font size=4px>A. {$row['A']}<br> </font>";
+                     echo "<font size=4px>B. {$row['B']}<br> </font>";
+                     echo "<font size=6px><B><font color= #ADFF2F>C. {$row['C']} </font></B><br> </font>";
+                     echo "<font size=4px>D. {$row['D']}<br> </font>";
                 }
                 else if($row2['ans'] == 'D')
                 {
-                     echo "A. {$row['A']}<br>";
-                     echo "B. {$row['B']}<br>";
-                     echo "C. {$row['C']}<br>";
-                     echo "<B><font color='green'>D. {$row['D']} </font></B><br>";
+                     echo "<font size=4px> A. {$row['A']}<br></font>";
+                     echo "<font size=4px>B. {$row['B']}<br></font>";
+                     echo "<font size=4px>C. {$row['C']}<br></font>";
+                     echo "<B><font size=6px><font color=#ADFF2F>D. {$row['D']} </font></B><br></font>";
                 }
-             echo "_________________________________<br><br><br>";
+             echo "_______________________________________________<br><br><br>";
             }
     }
 
