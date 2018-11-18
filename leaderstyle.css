@@ -1,0 +1,92 @@
+html,
+:root,
+body {
+  background: linear-gradient(45deg,#3D9970 50%, #B10DC9 50%);
+  background-size: cover;
+  height: 100%;
+  overflow: auto;
+}
+
+#leaderboard {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  display: flex;
+  font-family: Lato, sans-serif;
+  height: auto;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 1.5rem auto;
+  max-width: 75%;
+  min-width: 320px;
+  width: auto;
+}
+
+#leaderboard header {
+  background-color: #FF851B;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  z-index: 1;
+}
+
+#leaderboard header h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin: auto;
+  text-align: center;
+}
+
+.points {
+  float: right;
+  background: #FF4136;
+  border-radius: 50%;
+  color: #fff;
+  padding: .5rem;
+  text-align: center;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 76em;
+}
+
+.rb-grid {
+  list-style: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.rb-grid li {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .25);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+  box-sizing: border-box;
+  cursor: pointer;
+  display: list-item;
+  float: left;
+  font-size: 1.125rem;
+  font-style: italic;
+  list-style-position: inside;
+  list-style-type: decimal;
+  margin-top: -1px;
+  padding: 1.6rem;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: transform .5s ease;
+  width: 100%;
+}
+
+.rb-grid li:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  background: #eee;
+    z-index: 1;
+}
+
+li p {
+  font-size: 1rem;
+  font-style: normal;
+  margin: 0;
+}
