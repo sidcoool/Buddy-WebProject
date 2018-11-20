@@ -1,10 +1,11 @@
 <?php 
-$con = mysqli_connect("localhost","root","","buddy");
+session_start();
+$con = mysqli_connect("localhost","root","","buddys");
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-    $uid = $_SESSION['varname'];
+    $uid = 13;
     $A='A';
     $B='B';
     $C='C';
@@ -61,8 +62,8 @@ if (mysqli_connect_errno())
             while ($row=mysqli_fetch_array($res)) 
             {
                 $y=$y+1;
-                 $sql[$y] = "select ans from answers where uid='$uid' and qid={$row['qid']}";
-                 $result[$y] = mysqli_query($con,$sql[$y]);
+                $sql[$y] = "select ans from answers where uid='$uid' and qid={$row['qid']}";
+                $result[$y] = mysqli_query($con,$sql[$y]);
                 $x=$x+1;
                 echo "{$x}:  {$row['ques']}<br>";
                 $row2 = mysqli_fetch_array($result[$y]);

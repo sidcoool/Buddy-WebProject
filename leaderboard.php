@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("localhost","root","","buddy");
+$con=mysqli_connect("localhost","root","","buddys");
 if (mysqli_connect_errno())
 {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -36,9 +36,10 @@ mysqli_close($con);
     <h1>Quiz Leaderboard</h1></header>
    <div class="main">
     <ol id="rb-grid" class="rb-grid clearfix">
-      echo "<li>
-        <p> <?php echo $name[0]; ?><span class="points"><?php echo $name[0]; ?></span></p>
-        </li>"
+     <?php for($i=0; $i<$x; $i++){
+       echo "<li>
+        <p> ".$name[$i]."<span class='points'>".$percent[$i]."%</span></p>
+        </li>";} ?>
     </ol>
     </div>
  </div>

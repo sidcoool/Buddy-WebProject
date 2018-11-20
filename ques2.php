@@ -1,6 +1,7 @@
 <?php
+session_start();
 echo "questionare<br><br>";
-$con=mysqli_connect("localhost","root","","buddy");
+$con=mysqli_connect("localhost","root","","buddys");
 if (mysqli_connect_errno())
 {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -16,7 +17,7 @@ if(!$result=mysqli_query($con, $sql))
 {
 	echo"can't execute querry";
 }
-  	   	 echo '<form method="GET" action="myresponses.php">';
+  	   	 echo '<form method="GET" action="myresponses2.php">';
   	while ($row=mysqli_fetch_array($result)) 
   	{
   		 $A='A';
