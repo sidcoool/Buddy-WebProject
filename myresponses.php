@@ -151,16 +151,15 @@ if (mysqli_connect_errno())
     <a href='friend_response<?php echo $uid ?>.php'>Click Here</a><br>
     Or press the button below to post this Questionaire on Facebook";
 <br>
-    <div>
-<button id="shareBtn" style = "color:white; background-color:blue;" >Share</button></div>
-<script>
-document.getElementById('shareBtn').onclick = function() {
+    <script>
+function runit(){
   FB.ui({
     method: 'share',
     display: 'popup',
-    href: 'www.google.com',
-  }, function(response){});
+    href: 'https://developers.facebook.com/docs/',
+  });
 }
 </script>
+<button id="shareBtn" style = "color:white; background-color:blue;" onclick="runit()" >Share</button>
 </body>
 </html>

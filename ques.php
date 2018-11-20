@@ -34,6 +34,18 @@ if(!$result=mysqli_query($con, $sql))
 	echo"can't execute querry";
 }
   	   	 echo '<form method="GET" action="myresponses.php">';
+echo '<center><input type="submit" name="SUBMIT1" value="SUBMIT" style="color: red; position: fixed;  margin-left:450;   display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #f4511e;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999; "></center><br>';
   	while ($row=mysqli_fetch_array($result)) 
   	{
   		 $A='A';
@@ -152,22 +164,7 @@ if(!$result=mysqli_query($con, $sql))
            </style>
          {$row['D']}<br><br></h4>";	 
   	}
-  		 echo ' <p>
-         <style>
-          p{
-              font-size: 40px;
-              right: 0;
-              padding: 5px 5px;
-              color: #888;
-              border-radius: 5px;
-              cursor: pointer;
-              align: center;
-              color: black;
-              z-index: 1;
-            }
-            </style>
-         
-         <center><input type="submit" name="SUBMIT1" value="SUBMIT"></center><br></p>';
+  		 
   		 echo "</form>";
   	$A='A';
 	$B='B';
