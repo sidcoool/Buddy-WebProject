@@ -1,3 +1,15 @@
+<?php session_start(); 
+
+if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,6 +26,30 @@
 <script type="text/javascript" href = ""></script>
 </head>
 <body>
+    <div class="header">
+	<h2>Home Page</h2>
+</div>
+<div class="content">
+  	<!-- notification message -->
+  	<?php if (isset($_SESSION['success'])) : ?>
+      <div class="error success" >
+      	<h3>
+          <?php 
+          	echo $_SESSION['success']; 
+          	unset($_SESSION['success']);
+          ?>
+      	</h3>
+      </div>
+  	<?php endif ?>
+
+    <!-- logged in user information -->
+    <?php  if (isset($_SESSION['username'])) : ?>
+    
+    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    	<p> <a href="HomePage/home.php?logout='1'" style="color: red;">logout</a> </p>
+    <?php endif ?>
+    
+    
    <div class="container-fluid">
     <header>
      <div class ="row">
@@ -26,7 +62,7 @@
         <a href="home.html">BUDDY </a>
           </li>
       <li>
-       <a href="#">About Us </a>
+       <a href="www.google.com">About Us </a>
        </li>
         <li>
         <a href="#">Contact Us </a>
@@ -67,7 +103,7 @@
     <div class="title_container">
         <h2><b>Contact Us </b></h2>
     </div>
-    <form action="contact_us.php" method="post">
+    <form>
       <div class="row clearfix">
         <div class="col_half">
           <label>First name</label>
@@ -104,7 +140,7 @@
           </div>
         </div>
       </div>
-        <center><input class="button1" type="submit" value="Sumbit" name="submit"/> </center>
+        <center><input class="button1" type="submit" value="Sumbit"/> </center>
     </form>
   </div>
 </div>
@@ -123,4 +159,4 @@
 </div>
 </footer>
   </body>
-  </html>       
+  </html>

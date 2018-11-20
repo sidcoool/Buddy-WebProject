@@ -26,8 +26,8 @@ if (mysqli_connect_errno())
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 $sql="select qid,ques,A,B,C,D from questions";
-$uid=5;
-$_SESSION['varname'] = $uid;
+$uid = $_SESSION['uid1'];
+$_SESSION['uid2'] = $uid;
 
 if(!$result=mysqli_query($con, $sql))
 {
