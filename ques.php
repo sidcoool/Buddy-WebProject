@@ -18,8 +18,20 @@ echo"
     border: 2px solid black;
     }
     </style>
-    Questionare 
-</h1> <br>";
+    Questionnaire 
+</h1> <br>
+<h3><style> h3 { color: black;
+    text-decoration-color: white
+    font-family: san-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+    align-content: center;
+    border: 2px solid black;
+    }
+    </style>
+    Select as many questions as you like for this questionnaire and then hit sumbit on your right 
+    </h3>";
 $con=mysqli_connect("localhost","root","","buddys");
 if (mysqli_connect_errno())
 {
@@ -64,7 +76,7 @@ echo '<center><input type="submit" name="SUBMIT1" value="SUBMIT" style="color: r
               cursor: pointer;
               background-color: #1ba94c	;
               color: black;
-              z-index: 1;
+              
             }
             </style>
          {$row['qid']}:  {$row['ques']}<br><br> </p>";
@@ -75,7 +87,7 @@ echo '<center><input type="submit" name="SUBMIT1" value="SUBMIT" style="color: r
               text-decoration-color: white;
               text-transform: uppercase;
              font-size: 20px;
-             display: inline-block;
+             
            }
            </style>
          A. <input type='checkbox' name='valA[]' value='".$rqid."'></h4>";
@@ -86,8 +98,8 @@ echo '<center><input type="submit" name="SUBMIT1" value="SUBMIT" style="color: r
               text-decoration-color: white;
               text-transform: uppercase;
              font-size: 20px;
-             display: inline-block;
-             margin-top: 5px;
+             
+             margin-top: 30px;
            }
            </style>
          {$row['A']}<br><br></h4>";

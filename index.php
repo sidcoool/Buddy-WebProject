@@ -15,7 +15,7 @@
   $result = mysqli_query($db,$sql);
   $row = mysqli_fetch_array($result);
   $uid=$row['id'];
-$_SESSION['uid1'] = $uid;
+  $_SESSION['uid1'] = $uid;
 ?>
 
 <!doctype html>
@@ -47,14 +47,12 @@ $_SESSION['uid1'] = $uid;
         <a href="index.php">BUDDY </a>
           </li>
       <li>
-       <a href="#">About Us </a>
+       <a href="#down1">About Project </a>
        </li>
         <li>
-        <a href="#">Contact Us </a>
+        <a href="#down">Contact Us </a>
         </li>
-         <li>
-        <a href="#">Profile </a>
-        </li>
+        
         <button class="btn">
        <a href="index.php?logout='1'">LOGOUT</a>
         </button>
@@ -68,16 +66,16 @@ $_SESSION['uid1'] = $uid;
  <div class="hero">
      <h1 id="h">Are You Ready?</h1>
      <div class="button">
-         <a href="ques.php" class="btn btn-one">Create Quesnaire</a>
+         <a href="ques.php" class="btn btn-one">Create Questionnaire</a>
          <a href="leaderboard.php" class="btn btn-two"> Leaderboard </a>
      </div>
  </div>
   </header>
     <section class="cover">
-  <div class="content">
-    <h2 class="heading">We are here<br />for all your need.</h2>
+  <div class="content" id="down1">
+    <h2 class="heading">Buddy is platform<br />to know how much your <br />closed ones know you</h2>
     <div class="cta-btn">
-    <a href="#">Create Your Personal Quiz Now!</a>
+    <a href="ques.php">Create Your Personal Quiz Now!</a>
     </div>
     <div class="card">
       <h2>Friendship</h2>
@@ -93,8 +91,10 @@ $_SESSION['uid1'] = $uid;
     <div class="title_container">
         <h2><b>Contact Us </b></h2>
     </div>
+      	
+
     <form method="POST" action="contact_us.php">
-      <div class="row clearfix">
+      <div class="row clearfix" id="down">
         <div class="col_half">
           <label>First name</label>
           <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>

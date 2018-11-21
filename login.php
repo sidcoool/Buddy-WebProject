@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="stylelogin.css">
 </head>
  <body background="back.jpg">
-        <img src = "back2.jpg" style="position: fixed; height: 800px; width: 1100px;">
+        
         
         <div id="container">
         <form method="post" action="login.php">

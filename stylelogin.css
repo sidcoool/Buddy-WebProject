@@ -1,15 +1,18 @@
 #container
         {
+position: fixed;
+            left: 35%;
+            
             border-style: ridge;
             box-sizing: border-box;
             background-color: #f1f1f2;
-            margin-left: 750px;
             width: 400px;
+            align-content: center;
             height: auto;
             top: 100px;
             align-items: center;
             padding: 20px;
-            position: fixed;
+            
         }
           
           .bar
